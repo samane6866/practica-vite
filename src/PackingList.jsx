@@ -1,6 +1,6 @@
-function Item({ name, isPacked }) {
-  return <li className="item">{name}</li>;
-}
+// function Item({ name, isPacked }) {
+//   return <li className="item">{name}</li>;
+// }
 
 export default function PackingList() {
   return (
@@ -12,5 +12,20 @@ export default function PackingList() {
         <Item isPacked={false} name="Photo of Tam" />
       </ul>
     </section>
+  );
+}
+
+// function Item({ name, isPacked }) {
+//     if (isPacked) {
+//         return <li className="item">{name} ✔</li>;
+//     }
+//     return <li className="item">{name}</li>;
+// }
+
+function Item({ name, isPacked }) {
+  return (
+    <li className="item">
+      {name} {isPacked ? "✔" : "not"}
+    </li>
   );
 }
